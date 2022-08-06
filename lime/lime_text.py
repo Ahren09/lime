@@ -132,7 +132,7 @@ class IndexedString(object):
                 if word not in vocab:
                     vocab[word] = len(vocab)
                     self.inverse_vocab.append(word)
-                    self.positions.append([])
+                    self.positions.append([]) # Create a list of index for each new word
                 idx_word = vocab[word]
                 self.positions[idx_word].append(i)
             else:
